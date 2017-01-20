@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
     public float bulletSpeed;
+    public int destroyTime = 1;
 
     void Start()
     {
@@ -17,5 +18,6 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.up * bulletSpeed * Time.deltaTime;
+        Destroy(gameObject, destroyTime);
     }
 }
