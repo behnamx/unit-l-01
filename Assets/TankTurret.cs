@@ -11,14 +11,13 @@ public class TankTurret : MonoBehaviour
     public GameObject bullet;
     public GameObject textObject;
     public int Bullets = 0;
-    private Text bulletText;
+    public Text bulletText;
 
 
     void Start()
     {
         // Initializing debugging log
         Debug.Log("Ready to roll out!");
-        bulletText = GetComponent<Text>();
 
     }
 
@@ -45,6 +44,7 @@ public class TankTurret : MonoBehaviour
             bulletText.text = "I love text. I love it good!";
 
         }
+        bulletText.text = "Bullets: " + Bullets;
 
 
     }
